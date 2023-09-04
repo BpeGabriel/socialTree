@@ -10,6 +10,7 @@
   --surface-color: rgba(255, 255, 255, 0.2);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
+  --bg-button: white url(./assets/moon.svg) no-repeat center;
 }
 .light {
   --text-color: black;
@@ -18,6 +19,7 @@
   --surface-color: rgba(0, 0, 0, 0.07);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.15);
+  --bg-button: white url(./assets/sun.svg) no-repeat center;
 }
 
 body {
@@ -44,6 +46,39 @@ body * {
   font-weight: bold;
   line-height: 24px;
   margin-top: 8px;
+}
+
+#switch {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 64px;
+  height: 24px;
+
+  margin: 4px auto;
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-button);
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+}
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
 }
 
 /* liniks-lista */
